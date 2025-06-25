@@ -1,0 +1,156 @@
+/* Osnovni stilovi za mobilni prikaz */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111111;
+}
+
+/* Zaglavlje */
+.header {
+  background: #f8f8f8;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.branding .logo {
+  height: 40px;
+}
+.branding .tagline {
+  font-size: 12px;
+  color: #555;
+  margin-left: 10px;
+  flex: 1;
+}
+.menu-toggle, .close {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+}
+
+/* Sidebar navigacija */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 80%;
+  height: 100%;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar .menu li {
+  margin: 15px 0;
+}
+.sidebar .menu a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+}
+
+/* Glavni sadržaj */
+.content {
+  padding: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.content h1 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+.content .meta {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 1em;
+}
+.content p {
+  line-height: 1.6;
+  margin: 0 0 1em;
+}
+
+/* Galerija */
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0;
+}
+.gallery img {
+  flex: 0 0 auto;
+  width: 80%;
+  height: auto;
+  margin-right: 10px;
+  scroll-snap-align: center;
+  border: 2px solid #fff;
+}
+
+/* Reklame */
+.ad {
+  text-align: center;
+  color: #555;
+  font-size: 0.9em;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 1em 0;
+}
+.ad-inline {}
+.ad-banner {}
+
+/* Preporuke */
+.recommendations {
+  background: #f8f8f8;
+  padding: 15px;
+  margin-top: 2em;
+}
+.recommendations h2 {
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+.recommendations ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.recommendations li {
+  margin: 0.3em 0;
+}
+.recommendations a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95em;
+}
+
+/* Desktop prilagodba */
+@media (min-width: 768px) {
+  .menu-toggle, .close {
+    display: none;
+  }
+  .sidebar {
+    display: block;
+    position: static;
+    width: 200px;
+    height: auto;
+    border: none;
+    padding: 0;
+    float: left;
+  }
+  .content {
+    margin-left: 220px;
+  }
+}
